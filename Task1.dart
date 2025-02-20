@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   Map car = {
     'Brand': 'BMW',
