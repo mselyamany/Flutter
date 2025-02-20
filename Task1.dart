@@ -26,5 +26,6 @@ void main() {
     default:
       print('Enter Valid Color');
   }
-  print(car['Price'] == 2000000);
+  print(car['Price'] == 2000000 && car['Model'] == 'BMW 520');
+  print(car['Price'] == 3000000 || car['Model'] == 'BMW 150');
 }
