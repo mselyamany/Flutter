@@ -1,9 +1,11 @@
+import 'dart:ffi';
+
 void main() {
   Map car = {
     'Brand': 'BMW',
     'Model': 'BMW 520',
     'Color': 'black',
-    'Price': '2000000'
+    'Price': 2000000
   };
   print(car);
   if (car['Brand'] == 'BMW') {
@@ -18,10 +20,13 @@ void main() {
 
   switch (car['Color']) {
     case 'black':
-      print('Yes the Color black');
+      print('Yes The Color Black');
       break;
     case 'red':
-      print('No the Color black');
+      print('No The Color Black');
+      break;
+    default:
+      print('Enter Valid Color');
   }
+  print(car['Price'] == 2000000);
 }
-
