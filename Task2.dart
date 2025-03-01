@@ -69,6 +69,12 @@ void main() {
   deposit1.printDeposit();
   deposit2.printDeposit();
   deposit3.printDeposit();
+  deposit1.AccountDetails();
+  TrafficLight currentLight = TrafficLight.Red;
+  TrafficLight nextLight = TrafficLight.Green;
+  TrafficSystem light =
+      TrafficSystem(current: 'currentLight', next: 'nextLight');
+  light.printLight();
 }
 
 class Book {
@@ -110,4 +116,28 @@ class BankAccount {
     print(
         'Deposit Info : Customer Id $customerId ,Customer Name $customerName,Date $date,Cash Balance $cashBalance');
   }
+
+  void AccountDetails() {
+    if (cashBalance == null) {
+      print('Cash Balance Zero');
+    } else if (cashBalance! <= 1000000) {
+      print('Customer VIP');
+    } else {
+      print('Customer Not VIP');
+    }
+  }
 }
+
+class TrafficSystem {
+  String? current;
+  String? next;
+  TrafficSystem({required String current, required String next}) {
+    this.current = current;
+    this.next = next;
+  }
+  void printLight() {
+    print('Current Light $current and Next Light $next');
+  }
+}
+
+enum TrafficLight { Red, Yellow, Green }
