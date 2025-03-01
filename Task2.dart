@@ -70,11 +70,17 @@ void main() {
   deposit2.printDeposit();
   deposit3.printDeposit();
   deposit1.AccountDetails();
+
   TrafficLight currentLight = TrafficLight.Red;
-  TrafficLight nextLight = TrafficLight.Green;
-  TrafficSystem light =
-      TrafficSystem(current: 'currentLight', next: 'nextLight');
-  light.printLight();
+  TrafficLight nextLight = TrafficLight.Yellow;
+
+  switch (currentLight) {
+    case TrafficLight.Red:
+      print('Current Light Red and Next Light $nextLight');
+      break;
+    default:
+      print('Enter Value');
+  }
 }
 
 class Book {
