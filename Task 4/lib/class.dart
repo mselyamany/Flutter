@@ -10,3 +10,40 @@ class BankAccount {
 
   double get getBalance => this._balance;
 }
+
+class Animal {
+  void makeSound() {}
+}
+
+class Dogs implements Animal {
+  @override
+  void makeSound() {
+    print('Woof!');
+  }
+}
+
+class Cats implements Animal {
+  @override
+  void makeSound() {
+    print('Meow!');
+  }
+}
+
+abstract class Shape {
+  double? length;
+  double? width;
+  void sumArea() {}
+  void sumPerimeter() {}
+}
+
+class Rectangle extends Shape {
+  @override
+  void sumArea() {
+    print(length! * width!);
+  }
+
+  @override
+  void sumPerimeter() {
+    print((length! + width!) * 2);
+  }
+}
