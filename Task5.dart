@@ -14,6 +14,10 @@ void main() async {
   });
 
   await Future.delayed(Duration(seconds: 5), () {
+    print('Loading..................');
+  });
+
+  await Future.delayed(Duration(seconds: 5), () {
     for (var element in myList) {
       print(element);
     }
