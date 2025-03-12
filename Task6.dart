@@ -1,7 +1,7 @@
 void main() {
   Tasks t1 = Tasks();
   t1.addTask('task1');
-  t1.removeTask(0);
+  t1.removeTask('task1');
   t1.saveing();
   t1.loading();
 }
@@ -14,12 +14,12 @@ class Tasks {
     print('Added $task');
   }
 
-  void removeTask(int index) {
-    if (tasks.isEmpty) {
-      print('No TaskS');
+  void removeTask(String task) {
+    if (tasks.contains(task)) {
+      tasks.remove(task);
+      print('Task removed: $task');
     } else {
-      tasks.remove(index);
-      print('Remove Task No. $index');
+      print('No Task Name');
     }
   }
 
