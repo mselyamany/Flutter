@@ -5,6 +5,8 @@ void main() async {
   myList.add('Task3');
   myList.addAll(['Task4', 'Task5', 'Task6']);
 
+  print('Original list : ${myList}');
+
   myList.remove(myList[0]);
 
   myList.remove(myList[1]);
