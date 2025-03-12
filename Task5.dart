@@ -19,6 +19,19 @@ void main() async {
     print('Loading..................');
   });
 
+  void showTasks() {
+    if (myList.isEmpty) {
+      print('No tasks ');
+    } else {
+      print('Tasks:');
+      for (var task in myList) {
+        print('- $task');
+      }
+    }
+  }
+
+  showTasks();
+
   await Future.delayed(Duration(seconds: 5), () {
     for (var element in myList) {
       print(element);
