@@ -15,8 +15,12 @@ class Tasks {
   }
 
   void removeTask(int index) {
-    tasks.remove(index);
-    print('Remove Task No. $index');
+    if (tasks.isEmpty) {
+      print('No TaskS');
+    } else {
+      tasks.remove(index);
+      print('Remove Task No. $index');
+    }
   }
 
   void showAllTasks() {
