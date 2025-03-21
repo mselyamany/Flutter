@@ -14,45 +14,46 @@ class MyWidget extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 4, 116, 207),
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: [
-                  Text('NOKO Print'),
-                ],
+                children: [Text('NOKO Print')],
               ),
               Row(
-                children: [Text('!')],
-              ),
+                children: [Text(':')],
+              )
             ],
           ),
-          backgroundColor: Colors.blue,
-          titleTextStyle: TextStyle(color: Colors.white),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Column(children: [
+        body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Column(
+            children: [
               Text(
                 'Photos',
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-            ]),
-            Column(children: [
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              )
+            ],
+          ),
+          Column(
+            children: [
               Text(
                 'Documents',
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-            ]),
-            Column(children: [
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              )
+            ],
+          ),
+          Column(
+            children: [
               Text(
                 'Web Pages',
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-            ]),
-          ],
-        ),
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              )
+            ],
+          ),
+        ]),
       ),
     );
   }
